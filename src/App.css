@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Remove default margin */
+body,
+h1,
+h2
+ {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
+
+
+.App{
+    background-color: darkgray;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+.header{
+    text-align: center;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/*********MODAL*******/
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    background-color: gray;
+    width: 40vw;
+    height: 25vh;
+    border-radius: 3px;
+}
+
+.text-input{
+    border-radius: 3px;
+    border: none;
+}
+
+.date-input{
+    border-radius: 3px;
+    border: none;
+}
+
+.status-input{
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 0.2rem;
+    background-color: white;
+}
+
+/*****BUTTONS*********/
+.button {
+    padding: 0.1rem;
+    border-style: none;
+    border-radius: 3px;
+
+}
+
+.add-btn{
+    background-color: green;
+}
+
+.cancel-btn {
+ background-color: red;
+}
+.done-btn{
+    background-color:green;
+}
+
+.edit-btn{
+    background-color:yellow;
+}
+
+.delete-btn{
+    background-color:red;
+}
+
+
+/*********TODO-LIST**************/
+
+.todo-container{
+
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-left: 29%;
+    margin-right: auto;
+    list-style: none;
+}
+
+.todo{
+    display: flex;
+    gap: 0.2rem;
+    margin-top: 0.5rem;
+}
+
