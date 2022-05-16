@@ -21,11 +21,17 @@ const Todo = ({ text, date, status, todo, todos, setTodos }) => {
   return (
     <div className="todo">
       <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-        {todo.text} {todo.date} {todo.status}
+        {todo.text} - {todo.date} - {todo.status}
       </li>
-      <button className="button done-btn" onClick={completeHandler}>Done</button>
-      <button className="button edit-btn">Edit</button>
-      <button className="button delete-btn" onClick={deleteHandler}>Delete</button>
+      <div className="item-btns">
+        <button className="button done-btn" onClick={completeHandler}>
+          Done
+        </button>
+        <button className="button edit-btn">Edit</button>
+        <button className="button delete-btn" onClick={deleteHandler}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 };

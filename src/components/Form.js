@@ -30,7 +30,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, inputDate }) => {
           type="text"
           placeholder="title"
           className="text-input"
-          autofocus
+          autoFocus
         />
         <input
           onChange={inputTextHandler}
@@ -44,21 +44,21 @@ const Form = ({ setInputText, todos, setTodos, inputText, inputDate }) => {
           type="text"
           className="status-input"
         >
-          <option value="status">Status</option>
           <option value="Not started">Not started</option>
           <option value="In progress">In progress</option>
           <option value="Done">Done</option>
         </select>
-        <button
-          onClick={submitTodoHandler}
-          type="submit"
-          className="button add-btn"
-        >
-          Add
-        </button>
-        <button type="submit" className="button cancel-btn">
-          Cancel
-        </button>
+        <div className="modal-btns">
+          <button
+            onClick={submitTodoHandler}
+            type="submit"
+            className="button add-btn">
+            Add
+          </button>
+          <button type="submit" className="button cancel-btn">
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );

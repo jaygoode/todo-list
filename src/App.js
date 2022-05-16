@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Form from "./components/Form";
 import TodoList from "./components/todoList";
 import "./App.css"
 
 function App() {
-  const [inputText, setInputText] = useState({title:"", date:"", status:""});
+  const [inputText, setInputText] = useState({title:"", date:"", status:"Not started"});
   const [todos, setTodos] = useState([]);
   return (
     <div className="App">

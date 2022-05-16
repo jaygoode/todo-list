@@ -8,14 +8,13 @@
 /* Remove default margin */
 body,
 h1,
-h2
- {
+h2 {
   margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -23,7 +22,6 @@ ol[role='list'] {
 html:focus-within {
   scroll-behavior: smooth;
 }
-
 
 /* Make images easier to work with */
 img,
@@ -40,57 +38,60 @@ select {
   font: inherit;
 }
 
-
-.App{
-    background-color: darkgray;
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+.App {
+  background-image: linear-gradient(to bottom right, rgb(45, 49, 66), rgb(239, 131, 84));
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-.header{
-    text-align: center;
-}
-
-.completed{
-    text-decoration: line-through;
-    opacity: 0.6;
+.header {
+  text-align: center;
+  padding-top: 2rem;
 }
 
 /*********MODAL*******/
 
-.form-container{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
+.form-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 
-.modal{
+.modal {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
-    background-color: gray;
-    width: 40vw;
-    height: 25vh;
-    border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(45, 49, 66);
+  width: 70%;
+  max-width: 900px;
+  height: 25vh;
+  border-radius: 3px;
 }
 
-.text-input{
+.text-input {
     border-radius: 3px;
     border: none;
+    width: 40%;
+    background-color: rgb(191, 192, 192);
+    color: black;
+    
 }
 
-.date-input{
+.date-input {
+  border-radius: 3px;
+  border: none; 
+  background-color: rgb(191, 192, 192);
+  
+}
+
+.status-input {
     border-radius: 3px;
     border: none;
-}
-
-.status-input{
-    border-radius: 3px;
     box-shadow: none;
     padding: 0.2rem;
-    background-color: white;
+    background-color: rgb(191, 192, 192);
 }
 
 /*****BUTTONS*********/
@@ -98,47 +99,95 @@ select {
     padding: 0.1rem;
     border-style: none;
     border-radius: 3px;
-
 }
 
-.add-btn{
-    background-color: green;
+.add-btn {
+    background-color: rgb(120, 188, 97);
 }
 
 .cancel-btn {
- background-color: red;
-}
-.done-btn{
-    background-color:green;
+    background-color: rgb(166, 58, 80);
+    margin-left: 0.5rem;
 }
 
-.edit-btn{
-    background-color:yellow;
+.item-btns{
+    display: flex;
+    gap: 0.5rem;
 }
 
-.delete-btn{
-    background-color:red;
+.done-btn {
+    background-color: rgba(120, 188, 97, 0.733);
+}
+
+.edit-btn {
+    background-color: rgba(79, 93, 117);
+}
+
+.delete-btn {
+    background-color: rgba(166, 58, 80, 0.897);
 }
 
 
 /*********TODO-LIST**************/
 
-.todo-container{
-
+.todo-container {
+    background-color: rgba(45, 49, 66);
+    width: 65%;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 3px;
 }
 
-.todo-list{
+.todo-list {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     margin-left: 29%;
     margin-right: auto;
     list-style: none;
+    padding: 1rem;
 }
 
-.todo{
+.todo-item{
+    margin-right: 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo {
+    color:beige;
+    font-size: 1.2rem;
     display: flex;
     gap: 0.2rem;
     margin-top: 0.5rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .App {
+    background-color: lightblue;
+  }
+
+  .modal {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .modal-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .text-input {
+    width: 80%;
+  }
+
+  .date-input {
+    width: 80%;
+  }
+
+  .status-input {
+    width: 80%;
+  }
+}
