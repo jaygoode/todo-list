@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ setInputText, todos, setTodos, inputText, inputDate }) => {
+const Form = ({ setInputText, todos, setTodos, inputText, inputDate, closeModal, setEditFormData }) => {
   const inputTextHandler = (e) => {
     setInputText({ ...inputText, [e.target.name]: e.target.value });
   };
@@ -19,6 +19,13 @@ const Form = ({ setInputText, todos, setTodos, inputText, inputDate }) => {
     ]);
     setInputText({ title: "", date: inputText.date, status: inputText.status });
   };
+
+
+const cancelHandler = (event) => {
+  event.preventDefault();
+  closeModal(false)
+}
+
 
   return (
     <div className="form-container">
@@ -55,7 +62,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, inputDate }) => {
             className="button add-btn">
             Add
           </button>
-          <button type="submit" className="button cancel-btn">
+          <button onClick={cancelHandler} type="submit" className="button cancel-btn">
             Cancel
           </button>
         </div>
