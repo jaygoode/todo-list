@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdOutlineDeleteForever, MdDoneOutline, MdEdit } from 'react-icons/md';
 
 const Todo = ({
   text,
@@ -78,11 +79,11 @@ const Todo = ({
         </li>
         <div className="item-btns">
           <button className="button done-btn" onClick={completeHandler}>
-            Done
+            <MdDoneOutline/>
           </button>
-          <button className="button edit-btn">Edit</button>
+          <button className="button edit-btn"><MdEdit/></button>
           <button className="button delete-btn" onClick={deleteHandler}>
-            Delete
+            <MdOutlineDeleteForever/>
           </button>
         </div>
       </div>

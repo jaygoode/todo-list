@@ -1,4 +1,5 @@
 import React from "react";
+import {MdAdd, MdCancel} from 'react-icons/md';
 
 const Form = ({ setInputText, todos, setTodos, inputText, inputDate, closeModal, setEditFormData }) => {
   const inputTextHandler = (e) => {
@@ -59,11 +60,11 @@ const cancelHandler = (event) => {
           <button
             onClick={submitTodoHandler}
             type="submit"
-            className="button add-btn">
-            Add
+            className="button add-btn center">
+            <MdAdd/>
           </button>
-          <button onClick={cancelHandler} type="submit" className="button cancel-btn">
-            Cancel
+          <button onClick={cancelHandler} type="submit" className="button cancel-btn center">
+            <MdCancel/>
           </button>
         </div>
       </form>
